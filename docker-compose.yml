@@ -1,0 +1,9 @@
+services:
+  myapp:
+    build: .
+    network_mode: "host"
+    volumes:
+      - .:/app:delegated
+    working_dir: /app
+    command: sleep inf
+    # tty: true
