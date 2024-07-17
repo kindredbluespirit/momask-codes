@@ -5,5 +5,9 @@ services:
     volumes:
       - .:/app:delegated
     working_dir: /app
-    command: sleep inf
+    # command: sleep inf
+    # command: . ./setup-container.sh; sleep inf
+    # command: python app.py
+    command: sh ./entrypoint.sh
+    # entrypoint: ./entrypoint.sh
     # tty: true
